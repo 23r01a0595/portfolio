@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naga Manikanta | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#eef2f7; color:#333; }
+    header { background:linear-gradient(135deg,#0f172a,#1e293b); color:white; text-align:center; padding:50px 20px; }
+    header img { width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid white; margin-bottom:12px; }
+    header h1 { margin:6px 0; font-size:34px; }
+    header p { margin-bottom:12px; opacity:0.9; }
+    .links a { display:inline-block; margin:6px; text-decoration:none; color:white; background:#2563eb; padding:9px 14px; border-radius:6px; font-size:14px; }
+    .container { width:92%; max-width:1000px; margin:auto; padding:25px 0; }
+    .card { background:white; border-radius:12px; padding:22px; margin-bottom:22px; box-shadow:0 6px 14px rgba(0,0,0,0.08); }
+    h2 { border-bottom:2px solid #e2e8f0; padding-bottom:8px; margin-bottom:12px; }
+    ul { padding-left:18px; }
+    .skills span { display:inline-block; background:#e2e8f0; margin:5px; padding:6px 10px; border-radius:6px; font-size:14px; }
+    .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px; }
+    .cert-grid img { width:100%; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.15); }
+    footer { text-align:center; padding:20px; background:#0f172a; color:white; margin-top:20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="profile.jpg" alt="Profile Photo">
+  <h1>Naga Manikanta Kantamsetti</h1>
+  <p>Aspiring Software Engineer | Full Stack Developer</p>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/naga-manikanta-kantamsetti-1663ab28a" target="_blank">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="Naga_Manikanta_Resume.pdf" download>Download Resume</a>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="card">
+  <h2>Career Objective</h2>
+  <p>
+    Motivated Computer Science student seeking a software development role where I can apply my knowledge of
+    programming, data structures, full‑stack development, and machine learning fundamentals to build scalable
+    and efficient applications. My goal is to continuously learn modern technologies, contribute to impactful
+    projects, and grow as a software engineer in a collaborative environment.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Java</span><span>Python</span><span>C</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>MySQL</span><span>MongoDB</span><span>Git</span><span>Data Structures</span>
+    <span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>TravelBuddy – Travel Assistance Website</strong>
+      <p>Developed a collaborative travel‑planning platform that allows users to organize itineraries, manage travel plans,
+      and store trip information dynamically using MongoDB. Implemented responsive UI using HTML, CSS, and JavaScript
+      with Git‑based team collaboration.</p>
+    </li>
+    <li>
+      <strong>Online Plant Selling Website</strong>
+      <p>Designed and implemented a complete e‑commerce application with product listings, shopping cart functionality,
+      and plant care information. Built backend logic using Java and integrated MySQL database for product management.</p>
+    </li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Internships & Experience</h2>
+  <ul>
+    <li>Full Stack Development Intern — Cognifyz Technologies</li>
+    <li>Data Science Intern — Placify</li>
+    <li>AI‑ML Virtual Internship — EduSkills</li>
+    <li>AI + Sustainability Virtual Internship — IBM SkillsBuild, AICTE & 1M1B</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Education</h2>
+  <p>B.Tech in Computer Science and Engineering</p>
+  <p>CMR Institute of Technology (2023–2027)</p>
+  <p><strong>CGPA: 8.06</strong></p>
+</div>
+
+<div class="card">
+  <h2>Certifications & Achievements</h2>
+  <div class="cert-grid">
+    <img src="cert1.jpg">
+    <img src="cert2.jpg">
+    <img src="cert3.jpg">
+    <img src="cert4.jpg">
+    <img src="cert5.jpg">
+    <img src="cert6.jpg">
+    <img src="cert7.jpg">
+    <img src="cert8.jpg">
+  </div>
+</div>
+
+<div class="card">
+  <h2>Contact</h2>
+  <p>Email: manikantakantamsetti13@gmail.com</p>
+  <p>Location: Hyderabad, India</p>
+</div>
+
+</div>
+
+<footer>
+  <p>© 2026 Naga Manikanta K</p>
+</footer>
+
+</body>
+</html>

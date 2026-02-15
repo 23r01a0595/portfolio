@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naga Manikanta Kantamsetti | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:"Poppins",sans-serif;
+background:#0b1120;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#020617,#1e3a8a,#2563eb);
+color:white;
+text-align:center;
+padding:110px 20px;
+animation:fadeIn 1s ease;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+object-fit:cover;
+box-shadow:0 0 40px rgba(255,255,255,.35);
+transition:.4s;
+}
+.hero img:hover{ transform:scale(1.05); }
+
+.hero h1{ font-size:40px; margin:16px 0 6px; }
+.hero p{ font-size:18px; }
+
+.typing{ color:#e0e7ff; margin-top:12px; font-size:18px; }
+
+.btn{
+display:inline-block;
+background:white;
+color:#1e3a8a;
+padding:12px 20px;
+border-radius:10px;
+margin:10px;
+text-decoration:none;
+font-weight:600;
+transition:.25s;
+}
+.btn:hover{ transform:translateY(-2px); }
+
+/* CONTAINER */
+.container{
+width:92%;
+max-width:1100px;
+margin:auto;
+padding:40px 0;
+}
+
+/* CARD */
+.card{
+background:white;
+border-radius:16px;
+padding:28px;
+margin-bottom:26px;
+box-shadow:0 12px 28px rgba(0,0,0,.18);
+opacity:0;
+transform:translateY(30px);
+transition:.6s;
+}
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+border-bottom:2px solid #e5e7eb;
+padding-bottom:8px;
+margin-bottom:16px;
+}
+
+/* SKILLS */
+.skills span{
+display:inline-block;
+background:#eef2ff;
+margin:6px;
+padding:7px 12px;
+border-radius:8px;
+}
+
+/* PROJECT */
+.project-card{
+background:#f9fafb;
+padding:18px;
+border-radius:12px;
+margin:14px 0;
+border-left:5px solid #2563eb;
+}
+
+/* SECTION BLOCK */
+.section-block{
+background:#f8fafc;
+padding:14px;
+border-radius:10px;
+margin-top:12px;
+border-left:5px solid #0ea5e9;
+}
+
+/* CERT GRID */
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:18px;
+}
+.cert-item img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 6px 14px rgba(0,0,0,.25);
+cursor:pointer;
+transition:.3s;
+}
+.cert-item img:hover{ transform:scale(1.06); }
+
+/* MODALS */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.92);
+z-index:50;
+}
+.modal-content{
+display:block;
+margin:40px auto;
+max-width:90vw;
+max-height:90vh;
+border-radius:10px;
+}
+
+.resumeModal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+z-index:60;
+}
+.resumeModal iframe{ width:100%; height:100%; }
+
+footer{
+text-align:center;
+padding:22px;
+background:#020617;
+color:white;
+}
+
+/* HERO ANIMATION */
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
+ 
+ .contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+margin-top:10px;
+}
+
+.contact-box{
+background:#f8fafc;
+padding:18px;
+border-radius:12px;
+text-align:center;
+border-top:4px solid #2563eb;
+transition:.3s;
+}
+
+.contact-box:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+.contact-box h3{
+margin-bottom:8px;
+}
+
+.contact-box a{
+color:#2563eb;
+text-decoration:none;
+font-weight:600;
+}
+.whatsapp-btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.whatsapp-btn:hover{
+background:#1ebe5d;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<img src="profile.jpg">
+<h1>Naga Manikanta Kantamsetti</h1>
+<p>B-Tech | Computer Science and Engineering</p>
+<div class="typing" id="typing"></div>
+
+<a class="btn" href="https://www.linkedin.com/in/naga-manikanta-kantamsetti-1663ab28a" target="_blank">LinkedIn</a>
+<a class="btn" onclick="openResume()">View Resume</a>
+<a class="btn" href="Naga_Manikanta_Resume.pdf" download>Download Resume</a>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2>Career Objective</h2>
+<p>
+Aspiring Software Engineer pursuing B.Tech in Computer Science with strong knowledge of data structures,
+algorithms, and software development. Passionate about building efficient software systems and learning
+modern technologies while contributing to impactful engineering projects.
+</p>
+</div>
+
+<div class="card">
+<h2>Technical Skills</h2>
+<div class="skills">
+<span>Java</span><span>Python</span><span>C</span><span>HTML</span>
+<span>CSS</span><span>JavaScript</span><span>MySQL</span>
+<span>MongoDB</span><span>Git</span><span>OOP</span>
+<span>Data Structures</span><span>Unix/Linux</span>
+</div>
+</div>
+
+<div class="card">
+<h2>Projects</h2>
+
+<div class="project-card">
+<strong>TravelBuddy — Travel Assistance Website</strong>
+<p>
+Designed and developed a travel-planning web application that allows users to create itineraries,
+manage travel schedules, and store trip information dynamically.
+</p>
+<ul>
+<li>Responsive frontend using HTML, CSS, JavaScript</li>
+<li>MongoDB integration</li>
+<li>Git version control</li>
+<li>Form validation and navigation</li>
+</ul>
+<div><b>Technologies:</b> HTML, CSS, JavaScript, MongoDB</div>
+</div>
+
+<div class="project-card">
+<strong>Online Plant Selling Website</strong>
+<p>
+Built an e-commerce platform with product catalog, shopping cart functionality,
+and backend integration.
+</p>
+<ul>
+<li>Shopping cart system</li>
+<li>Backend using Java</li>
+<li>MySQL database integration</li>
+<li>Modular UI design</li>
+</ul>
+<div><b>Technologies:</b> HTML, CSS, Java, MySQL</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Internships</h2>
+
+<div class="section-block">
+Full Stack Development Intern — Cognifyz Technologies
+</div>
+
+<div class="section-block">
+Data Science Intern — Placify
+</div>
+
+<div class="section-block">
+AI-ML Virtual Internship — EduSkills
+</div>
+
+<div class="section-block">
+AI + Sustainability Internship — IBM SkillsBuild
+</div>
+
+</div>
+
+<div class="card">
+<h2>Education</h2>
+<div class="section-block">
+<strong>B.Tech — Computer Science and Engineering</strong>
+<p>CMR Institute of Technology (2023–2027)</p>
+<p>CGPA: 8.06</p>
+</div>
+
+<div class="section-block">
+<strong>Intermediate (MPC)</strong>
+<p>Narayana Junior College (2021–2023)</p>
+<p>GPA: 9.4</p>
+</div>
+
+<div class="section-block">
+<strong>SSC</strong>
+<p>Safdar Nagar High School (2020–2021)</p>
+<p>GPA: 10</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Certificates</h2>
+<p>Click any certificate image to view it in full screen.</p>
+
+<div class="cert-grid">
+  <div class="cert-item"><img src="cert1.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert2.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert3.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert4.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert5.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert6.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert7.jpg" onclick="showCert(this)"></div>
+  <div class="cert-item"><img src="cert8.jpg" onclick="showCert(this)"></div>
+</div>
+
+</div>
+
+
+</div>
+<div class="card">
+<h2>Contact</h2>
+
+<div class="contact-grid">
+
+<div class="contact-box">
+<h3>📧 Email</h3>
+<p>manikantakantamsetti13@gmail.com</p>
+</div>
+
+<div class="contact-box">
+<h3>📱 Phone</h3>
+<p>+91 6302269436</p>
+</div>
+ 
+
+
+
+<div class="contact-box">
+<h3>💼 LinkedIn</h3>
+<p>
+<a href="https://www.linkedin.com/in/naga-manikanta-kantamsetti-1663ab28a" target="_blank">
+View Profile
+</a>
+</p>
+</div>
+<div style="text-align:center; margin-top:15px;">
+<a href="https://wa.me/916302269436" target="_blank" class="whatsapp-btn">
+Chat on WhatsApp
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+
+<footer>© 2026 Naga Manikanta Kantamsetti</footer>
+
+<div id="certModal" class="modal" onclick="this.style.display='none'">
+<img id="certImg" class="modal-content">
+</div>
+
+<div id="resumeModal" class="resumeModal">
+<iframe src="Naga_Manikanta_Resume.pdf"></iframe>
+</div>
+
+<script>
+const text="Hi, I'm Manikanta — Welcome to my portfolio.";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,40);
+}}
+typing();
+
+function showCert(el){
+document.getElementById('certModal').style.display='block';
+document.getElementById('certImg').src=el.src;
+}
+function openResume(){
+document.getElementById('resumeModal').style.display='block';
+}
+
+/* SCROLL ANIMATION */
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+if(top<window.innerHeight-80){
+card.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
